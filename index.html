@@ -650,6 +650,76 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.pts li,.hero *{opacity:1;transform:none}.hook .w{transform:none}}
+
+/* ========== v6: abertura premium, ficha escura que ocupa a tela ========== */
+.hero .file{display:flex;flex-direction:column;flex:1 1 auto;border:0;border-radius:24px;color:#F4EEE6;
+  background:radial-gradient(120% 70% at 100% 0%,rgba(201,157,110,.20),transparent 60%),linear-gradient(165deg,#36251B 0%,#22170F 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 0 0 1px rgba(230,205,172,.10) inset,0 40px 70px -40px rgba(42,28,21,.85)}
+.hero .file::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.9;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9 0 0 0 0 .8 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .file::before{left:22px;right:22px;height:1px;background:linear-gradient(90deg,transparent,rgba(230,205,172,.7),transparent)}
+.hero .file>*{position:relative;z-index:1}
+.hero .f-head{border-bottom:1px solid rgba(230,205,172,.14);padding:16px 18px 13px}
+.hero .f-head b{color:#FBF7F2;font-size:20px;letter-spacing:-.005em}
+.hero .f-head span{color:var(--paisley);font-size:12.5px;font-weight:500}
+.hero .f-body{flex:1 1 auto;padding:16px 16px 14px;align-content:start}
+.hero .f-q2{color:#FBF7F2;font-size:16px}
+.hero .abtn{background:rgba(255,255,255,.035);border:1px solid rgba(230,205,172,.16);border-radius:18px;padding:14px 14px 14px 12px}
+@media (hover:hover){.hero .abtn:hover{border-color:var(--paisley);background:rgba(255,255,255,.06)}}
+.hero .abtn:active{border-color:var(--paisley)}
+.hero .ab-i{background:linear-gradient(150deg,#EBD5B6 0%,#C99D6E 100%);color:#2A1C15;box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}
+.hero .ab-t b{color:#FBF7F2}
+.hero .ab-t small{color:rgba(244,238,230,.62)}
+.hero .abtn>svg{color:var(--paisley)}
+.hero .f-swap{color:rgba(244,238,230,.75)}
+.hero .f-bh span{background:rgba(201,157,110,.16);color:var(--paisley-2)}
+.hero .f-b .sit{background:rgba(255,255,255,.04);border-color:rgba(230,205,172,.22);color:#F4EEE6}
+@media (hover:hover){.hero .f-b .sit:hover{border-color:var(--paisley);background:rgba(255,255,255,.08)}}
+.hero .sit-other{border-color:rgba(201,157,110,.7);color:var(--paisley-2)}
+.hero .f-sheet dt{color:var(--paisley)}
+.hero .f-sheet dd{color:rgba(244,238,230,.88)}
+.hero .f-sheet dd.big{color:#fff}
+.hero .f-foot{border-top:1px solid rgba(230,205,172,.14)}
+.hero .f-foot button{color:rgba(244,238,230,.75);text-decoration-color:rgba(230,205,172,.35)}
+.hero .stamp{background:#2A1C15;border-color:var(--paisley);color:var(--paisley-2)}
+.hero .stamp::before{border-color:rgba(201,157,110,.5)}
+.hero .f-sheet{position:relative}.hero .stamp{right:-2px;bottom:-4px}
+.f-trust{display:flex;flex-wrap:wrap;gap:6px 18px;padding:12px 18px;margin:0 16px;border-top:1px solid rgba(230,205,172,.12);font-size:13px;color:rgba(244,238,230,.7)}
+.f-trust span{display:inline-flex;align-items:center;gap:7px}
+.f-trust svg{width:15px;height:15px;color:var(--paisley);flex:none}
+.hero .file .cta{padding:4px 14px 14px;max-width:none}
+.hero .file .btn-navy{background:linear-gradient(180deg,#E3C69F 0%,#C99D6E 100%);color:#1F1712;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 16px 30px -18px rgba(0,0,0,.7)}
+@media (hover:hover){.hero .file .btn-navy:hover{background:linear-gradient(180deg,#EBD2AE 0%,#D2A877 100%)}}
+.hero .file .btn-navy .chip{background:#2A1C15;color:var(--paisley-2)}
+.hero .file .btn::after{background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%)}
+.hero .file .wa-sq{box-shadow:0 14px 28px -16px rgba(0,0,0,.7)}
+/* foto com moldura deslocada */
+.pic picture{position:relative;isolation:isolate}
+.pic picture::after{content:"";position:absolute;inset:0;border:1px solid var(--paisley);border-radius:16px;transform:translate(7px,7px);z-index:-1}
+.pic img{box-shadow:0 26px 44px -30px rgba(42,28,21,.75)}
+@media (min-width:980px){.pic picture::after{border-radius:22px;transform:translate(12px,12px)}.hero .f-head{padding:20px 24px 15px}.hero .f-body{padding:20px 22px 16px}.f-trust{margin:0 22px;padding:14px 2px}.hero .file .cta{padding:6px 22px 22px}}
+@media (max-height:740px) and (max-width:979px){.f-trust{display:none}}
+@media (max-width:979px){
+ .hero .f-pick{display:flex;flex-direction:column;justify-content:center}
+ .hero .f-a,.hero .f-b{gap:clamp(10px,1.5svh,14px)}
+ .hero .f-body{padding:14px}
+ .hero .abtn{padding:clamp(13px,2.1svh,22px) 12px;gap:12px;grid-template-columns:clamp(46px,6.4svh,56px) 1fr 18px}
+ .hero .ab-i{width:clamp(46px,6.4svh,56px);height:clamp(46px,6.4svh,56px);border-radius:15px}
+ .hero .ab-t b{font-size:clamp(17px,2.3svh,19.5px)}
+ .hero .ab-t small{font-size:clamp(13.5px,1.8svh,15px)}
+ .hero .f-q2{font-size:clamp(16px,2.1svh,18px);margin-bottom:clamp(2px,.8svh,8px)}
+}
+@media (max-height:620px) and (max-width:600px){.hero .f-head{padding:10px 14px 8px}.hero .f-body{padding:10px 12px}.hero .file .cta{padding:2px 10px 10px}}
+@media (max-width:379px){
+ .hero .f-head{padding:13px 14px 11px}.hero .f-head b{font-size:18px}.hero .f-head span{font-size:11.5px;white-space:nowrap}
+ .hero .f-body{padding:12px}
+ .hero .abtn{grid-template-columns:42px 1fr 16px;gap:10px;padding:12px 10px}
+ .hero .ab-i{width:42px;height:42px;border-radius:12px}.hero .ab-i svg{width:20px;height:20px}
+ .hero .ab-t b{font-size:16px}.hero .ab-t small{font-size:13px}.hero .abtn>svg{width:16px;height:16px}
+ .hero .f-q2{font-size:15.5px}
+ .hero .file .cta{padding:0 10px 10px;gap:8px}.hero .file .btn{padding-left:18px;font-size:15.5px;min-height:54px}.hero .file .btn .chip{width:40px;height:40px}.hero .file .wa-sq{width:54px;height:54px}
+ .pic figcaption b{font-size:12.5px;white-space:nowrap}.pic figcaption .oabn{font-size:11.5px;white-space:nowrap}
+}
+@media (min-width:980px){.f-trust{display:none}}
 </style>
 </head>
 <body>
@@ -673,15 +743,11 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
           </figure>
         </div>
         <p class="lede">Toque no que aconteceu com você e veja, na hora, como eu analisaria o seu caso.</p>
-        <div class="cta">
-          <a class="btn btn-navy" href="#diagnostico" data-go id="heroCta"><span class="lbl">Analisar meu caso</span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-          <a class="wa-sq" id="heroWaSq" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso." target="_blank" rel="noopener" aria-label="Falar direto no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A11.8 11.8 0 0 0 1.6 18.2L0 24l6-1.6A11.8 11.8 0 0 0 20 3.9zm-8 18.2a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.9 9.9 0 1 1 12 22.1zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6 6 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .8 2.7.9 3.7.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4z"/></svg></a>
-        </div>
+
         <p class="assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Atendo todo o Brasil, por vídeo</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Quem responde sou eu</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Conversar não gera compromisso</span></p>
       </div>
       <div class="file" id="file">
-        <div class="f-head"><b>Ficha do seu caso</b><span id="fNo">Atendo todo o Brasil, online</span></div>
-        <span class="stamp" aria-hidden="true">Pronto<br>para<br>análise</span>
+        <div class="f-head"><b>Ficha do seu caso</b><span id="fNo">Leva menos de 1 minuto</span></div>
         <div class="f-body">
           <div class="f-pick">
             <div class="f-a" id="fA">
@@ -715,6 +781,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
             </div>
           </div>
           <div class="f-sheet" aria-live="polite">
+            <span class="stamp" aria-hidden="true">Pronto<br>para<br>análise</span>
             <dl>
               <dt class="ln">Situação</dt><dd class="ln big" id="fSit">—</dd>
               <dt class="ln">Área</dt><dd class="ln" id="fArea">—</dd>
@@ -723,6 +790,11 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
             </dl>
             <div class="f-foot"><button id="fBack">Trocar situação</button><span class="f-ok" id="fOk"></span></div>
           </div>
+        </div>
+        <div class="f-trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Todo o Brasil, por vídeo</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Quem responde sou eu</span></div>
+        <div class="cta">
+          <a class="btn btn-navy" href="#diagnostico" data-go id="heroCta"><span class="lbl">Analisar meu caso</span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="wa-sq" id="heroWaSq" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso." target="_blank" rel="noopener" aria-label="Falar direto no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A11.8 11.8 0 0 0 1.6 18.2L0 24l6-1.6A11.8 11.8 0 0 0 20 3.9zm-8 18.2a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.9 9.9 0 1 1 12 22.1zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6 6 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .8 2.7.9 3.7.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4z"/></svg></a>
         </div>
       </div>
     </div>
@@ -891,7 +963,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
       $('#fSit').textContent=c[0];$('#fArea').textContent=c[1];$('#fJogo').textContent=c[2];$('#fPrazo').textContent=c[3];$('#fNo').textContent=fno;
       file.classList.remove('done');void file.offsetWidth;file.classList.add('done');
       heroCta.setAttribute('data-pre',b.getAttribute('data-pre'));
-      lbl.textContent=b.classList.contains('emp')?'Analisar minha empresa':b.classList.contains('other')?'Contar meu caso no WhatsApp':'Continuar minha análise';
+      lbl.textContent=b.classList.contains('emp')?'Analisar minha empresa':b.classList.contains('other')?'Contar meu caso no WhatsApp':'Continuar análise';
       if(b.classList.contains('other')){heroCta.setAttribute('href',WA+encodeURIComponent('Olá, Dr. Victor Hugo! Vim pelo site. Meu caso é outro assunto e gostaria de contar para o senhor.'));heroCta.setAttribute('target','_blank');heroCta.removeAttribute('data-go');}else{heroCta.setAttribute('href','#diagnostico');heroCta.removeAttribute('target');heroCta.setAttribute('data-go','');}
       setCase(c[0],b.getAttribute('data-pre'));
       var pr=JSON.parse(b.getAttribute('data-pre'));setTab(pr.start==='inss'?1:pr.start==='emp'?2:0);
@@ -904,7 +976,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
   $('#fSwap').addEventListener('click',function(){file.classList.remove('step2');});
   setTimeout(function(){if(!file.classList.contains('done')&&!file.dataset.touched){file.classList.add('hint');setTimeout(function(){file.classList.remove('hint');},2400);}},2600);
   sits.forEach(function(b){b.addEventListener('click',function(){file.dataset.touched='1';file.classList.remove('hint');});});
-  $('#fBack').addEventListener('click',function(){file.classList.remove('done');if(!fB.getAttribute('data-g'))file.classList.remove('step2');lbl.textContent='Analisar meu caso';$('#fNo').textContent='Atendo todo o Brasil, online';heroCta.setAttribute('href','#diagnostico');heroCta.removeAttribute('target');heroCta.setAttribute('data-go','');});
+  $('#fBack').addEventListener('click',function(){file.classList.remove('done');if(!fB.getAttribute('data-g'))file.classList.remove('step2');lbl.textContent='Analisar meu caso';$('#fNo').textContent='Leva menos de 1 minuto';heroCta.setAttribute('href','#diagnostico');heroCta.removeAttribute('target');heroCta.setAttribute('data-go','');});
 
   /* ---- Barras fixas ---- */
   var hero=$('#topo'),topbar=$('#topbar'),dock=$('#dock'),diag=$('#diagnostico'),diagVisible=false;
