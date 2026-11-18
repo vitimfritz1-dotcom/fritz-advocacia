@@ -725,15 +725,91 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
  .hero{min-height:0}
  .hero .wrap{min-height:0;padding-bottom:clamp(20px,3svh,32px)}
  .hero .file{flex:0 0 auto}
- .hero .body{gap:clamp(22px,3.4svh,32px)}
+ .hero .body{gap:clamp(16px,3svh,30px)}
  .hero .f-body{min-height:0}
  .hero .f-pick{justify-content:flex-start}
 }
+
+/* ========== v7: monograma VH ========== */
+.vh{display:block;fill:currentColor;overflow:visible;aspect-ratio:3072/1617}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy)}
+.brand .vh{height:34px;width:65px;color:var(--brass-d);flex:none}
+.brand span{display:flex;flex-direction:column;line-height:1.2;padding-left:10px;border-left:1px solid var(--paisley-2)}
+.brand b{font-family:var(--serif);font-weight:400;font-size:16px;color:var(--ink);white-space:nowrap}
+.brand small{font-size:11.5px;font-weight:600;color:var(--ink-2);letter-spacing:.01em}
+.pic{position:relative}
+.vh-bg{position:absolute;z-index:-1;color:var(--paisley-2);opacity:.8;pointer-events:none;width:108%;left:-6%;top:calc(100% + 2px);height:auto}
+.hero .wrap{isolation:isolate}
+.topbar .vh{height:30px;width:57px;color:var(--brass-d);flex:none}
+.topbar>div{margin-right:auto}
+.foot-brand{display:flex;align-items:center;gap:14px;margin:48px 0 0;color:var(--paisley)}
+.foot-brand .vh{height:46px;width:87px}
+.foot-brand span{display:flex;flex-direction:column;line-height:1.25;padding-left:14px;border-left:1px solid rgba(230,205,172,.25)}
+.foot-brand b{font-family:var(--serif);font-weight:400;font-size:20px;color:#FBF7F2}
+.foot-brand small{font-size:13px;color:rgba(244,238,230,.65)}
+.vh-sign{height:46px;width:87px;color:var(--paisley);margin:6px 0 10px -4px}
+.vcard{position:relative}
+.vh-badge{position:absolute;z-index:3;right:14px;top:14px;display:grid;place-items:center;width:62px;height:46px;border-radius:12px;background:rgba(31,23,18,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(230,205,172,.25);color:var(--paisley-2);pointer-events:none}
+.vh-badge .vh{height:28px;width:53px}
+@media (max-width:979px){
+ .hero .pic figcaption{display:none}
+ .hero .role{border-top:0;padding-top:0}
+ .hero .hx .ttl{justify-content:flex-start;gap:10px}
+ .hero .hx{grid-template-columns:minmax(0,1fr) 38%;align-items:start}
+ .hero .pic{margin-top:6px}
+}
+@media (min-width:980px){.hero .brand{grid-column:1;order:-1}.hero .brand .vh{height:44px;width:84px}.hero .brand b{font-size:20px}.hero .brand small{font-size:13px}.vh-bg{width:70%;left:-34%;top:auto;bottom:-6%}.hero .pic figcaption{display:none}}
+
+/* ========== v7: Como funciona ilustrado ========== */
+.steps .st-p .mock{grid-column:2;margin-top:16px;max-width:340px}
+.mock{border-radius:20px;overflow:hidden;box-shadow:0 1px 0 rgba(42,28,21,.04),0 26px 50px -34px rgba(42,28,21,.55);opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.st-p.lit .mock{opacity:1;transform:none}
+.m-av{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--paisley-2);flex:none}
+.m-av .vh{width:30px;height:auto}
+.m-chat{background:#EFE7DD;border:1px solid var(--concrete-2)}
+.mc-h{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--navy);color:#FBF7F2}
+.mc-h b{display:block;font-size:14.5px;font-weight:600}
+.mc-h span{font-size:12px;color:#9BD5A8}
+.mc-b{display:flex;flex-direction:column;gap:8px;padding:14px 12px 16px}
+.bub{position:relative;max-width:88%;padding:9px 12px 18px;border-radius:14px;font-size:13.5px;line-height:1.4;color:var(--ink)}
+.bub i{position:absolute;right:10px;bottom:5px;font-style:normal;font-size:10.5px;color:var(--ink-3)}
+.bub.out{align-self:flex-end;background:#DCF3D5;border-bottom-right-radius:4px}
+.bub.in{align-self:flex-start;background:#fff;border-bottom-left-radius:4px}
+.bub dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:8px 0 0;padding:8px 10px;border-radius:9px;background:rgba(255,255,255,.65);font-size:12.5px}
+.bub dt{color:var(--ink-3)}.bub dd{margin:0;font-weight:600}
+.st-p.lit .bub{animation:bubIn .5s var(--ease) both}.st-p.lit .bub.in{animation-delay:.6s}
+@keyframes bubIn{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+.m-doc{position:relative;background:#fff;border:1px solid var(--concrete-2);padding:18px 18px 16px}
+.m-doc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--paisley),var(--brass-d))}
+.md-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-bottom:10px;margin-bottom:12px;border-bottom:1px dashed var(--concrete-2)}
+.md-h b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--ink)}
+.md-h span{font-size:11.5px;color:var(--ink-3)}
+.m-doc ul{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:7px}
+.m-doc li{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--ink)}
+.m-doc li::before{content:"";width:16px;height:16px;border-radius:5px;flex:none;background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E6CDAC' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.md-l{display:grid;gap:6px;margin-bottom:12px}.md-l i{height:6px;border-radius:3px;background:var(--concrete)}.md-l i:nth-child(2){width:86%}.md-l i:nth-child(3){width:58%}
+.md-s{display:flex;align-items:flex-end;gap:12px;padding-top:6px;border-top:1px solid var(--concrete)}
+.md-s .vh{width:84px;height:auto;color:var(--brass-d)}
+.md-s span{font-size:10.5px;line-height:1.35;color:var(--ink-3);padding-bottom:4px}
+.m-call{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px 18px 18px;color:#FBF7F2;background:radial-gradient(90% 70% at 50% 0%,rgba(201,157,110,.22),transparent 65%),linear-gradient(165deg,#36251B,#22170F)}
+.mv-tag{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:rgba(244,238,230,.7)}
+.mv-tag i{width:7px;height:7px;border-radius:50%;background:#E0574B;box-shadow:0 0 0 4px rgba(224,87,75,.18)}
+.mv-av{display:grid;place-items:center;width:92px;height:92px;margin:12px 0 12px;border-radius:50%;border:1px solid rgba(230,205,172,.35);background:rgba(255,255,255,.04);color:var(--paisley-2);box-shadow:0 0 0 8px rgba(230,205,172,.06)}
+.mv-av .vh{width:60px;height:auto}
+.m-call b{font-family:var(--serif);font-weight:400;font-size:20px}
+.mv-sub{font-size:12.5px;color:rgba(244,238,230,.65);margin-top:3px}
+.mv-ctl{display:flex;gap:12px;margin-top:16px}
+.mv-ctl i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);color:#FBF7F2}
+.mv-ctl i.end{background:#D9483B}
+.mv-ctl svg{width:19px;height:19px}
+@media (prefers-reduced-motion:reduce){.mock{opacity:1;transform:none;transition:none}.st-p.lit .bub{animation:none}}
+@media (max-width:379px){.brand .vh{height:28px;width:53px}.brand b{font-size:14px}.brand small{font-size:10.5px}.brand{gap:8px}.brand span{padding-left:8px}.hero .ab-t small{font-size:12.5px}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="vh" viewBox="-20 -1554 3072 1617"><g transform="scale(1,-1)"><path transform="translate(0,0)" d="M13 -43Q0 -43 0 -32Q0 -25 16 -18Q21 -15 30.5 -11.0Q40 -7 49 0Q123 50 222.0 194.0Q321 338 460 563Q555 719 655.5 855.5Q756 992 837 1081Q746 1017 663.5 979.5Q581 942 519 942Q474 942 440.0 966.0Q406 990 404 1034Q403 1073 426.0 1112.5Q449 1152 498 1202Q528 1234 565.0 1277.0Q602 1320 600 1349Q599 1387 562.5 1401.0Q526 1415 481 1415Q402 1415 335.0 1384.5Q268 1354 216 1311Q198 1295 191 1295Q180 1295 180 1306Q179 1320 204 1338Q256 1380 332.5 1408.0Q409 1436 483 1436Q563 1436 614.5 1407.5Q666 1379 669 1322Q671 1281 638.0 1220.0Q605 1159 556 1109Q510 1063 491.0 1040.5Q472 1018 473 1003Q473 968 522 968Q563 968 630.0 992.0Q697 1016 797.0 1082.5Q897 1149 1034 1277Q1048 1290 1071.0 1308.5Q1094 1327 1115.5 1342.0Q1137 1357 1148 1357Q1161 1357 1161 1347Q1162 1340 1154.0 1335.5Q1146 1331 1135 1324Q1126 1318 1109.5 1305.5Q1093 1293 1066 1267Q1037 1239 1015.0 1202.0Q993 1165 964.5 1110.5Q936 1056 890.5 975.0Q845 894 768 777Q656 604 565.5 487.0Q475 370 391.0 281.0Q307 192 212 102Q329 181 479.0 288.5Q629 396 791.0 520.0Q953 644 1111.0 772.0Q1269 900 1403 1018Q1402 1027 1402 1044Q1402 1133 1433.5 1220.0Q1465 1307 1516.5 1378.0Q1568 1449 1628.5 1491.5Q1689 1534 1746 1534Q1778 1534 1800.0 1515.0Q1822 1496 1822 1453Q1822 1368 1728.5 1246.0Q1635 1124 1456 968Q1478 901 1523.0 868.5Q1568 836 1609 836Q1629 836 1642 841Q1659 847 1664 847Q1678 847 1678 840Q1678 831 1658 822Q1640 813 1607 813Q1545 813 1496.5 848.5Q1448 884 1423 940Q1201 750 864.5 512.0Q528 274 92 -6Q60 -26 39.5 -34.5Q19 -43 13 -43ZM1442 1053Q1594 1191 1690.5 1300.5Q1787 1410 1787 1465Q1787 1486 1772.5 1497.5Q1758 1509 1746 1509Q1695 1509 1641.5 1472.5Q1588 1436 1543.0 1373.0Q1498 1310 1470.0 1230.5Q1442 1151 1442 1064Z"/><path transform="translate(609,0)" d="M190 -2Q111 -2 55.5 37.5Q0 77 0 132Q0 178 31.0 196.5Q62 215 93 215Q110 215 126.5 205.0Q143 195 143 170Q143 151 126.0 136.0Q109 121 86 121Q73 121 61.0 122.5Q49 124 39 130V124Q39 81 82.0 52.5Q125 24 198 24Q240 24 279.0 36.0Q318 48 359 68Q411 93 472.0 142.5Q533 192 617.0 283.5Q701 375 819 523Q758 505 712 490Q603 452 498.0 392.5Q393 333 338 250Q334 241 327 241Q320 241 322 249Q323 252 323.5 255.5Q324 259 329 269Q345 303 385.5 337.5Q426 372 475.0 403.0Q524 434 563 454Q608 477 676.0 502.0Q744 527 844 555Q967 722 1073.0 843.5Q1179 965 1241 1029Q1141 967 1073.5 943.5Q1006 920 957 920Q906 920 872.5 945.0Q839 970 839 1019Q839 1069 867.0 1118.0Q895 1167 977 1231Q1015 1262 1025.5 1275.0Q1036 1288 1036 1298Q1036 1328 1004.5 1347.0Q973 1366 905 1366Q831 1366 756.5 1338.5Q682 1311 623 1257Q608 1243 598 1243Q587 1243 587 1253Q587 1258 592.5 1264.0Q598 1270 605 1278Q661 1328 741.0 1357.5Q821 1387 905 1387Q988 1387 1034.0 1356.5Q1080 1326 1080 1273Q1080 1217 1048.5 1163.5Q1017 1110 926 1051Q894 1031 885.0 1020.5Q876 1010 876 996Q876 982 896.5 964.5Q917 947 970 947Q1033 947 1128.5 994.0Q1224 1041 1319 1124Q1411 1206 1472.0 1257.0Q1533 1308 1575.5 1338.5Q1618 1369 1654 1387Q1668 1393 1677.0 1397.0Q1686 1401 1690 1401Q1704 1401 1704 1394Q1704 1392 1683 1379Q1675 1375 1660.0 1365.5Q1645 1356 1610 1330Q1510 1248 1393.0 1099.0Q1276 950 1127 741Q1099 704 1071.0 669.5Q1043 635 1017 602Q1097 623 1193.0 646.5Q1289 670 1404 698Q1416 713 1429.0 728.0Q1442 743 1455 759Q1566 890 1693.5 1007.5Q1821 1125 1944.0 1215.5Q2067 1306 2169.5 1358.0Q2272 1410 2333 1410Q2377 1410 2400.0 1389.5Q2423 1369 2423 1339Q2423 1289 2362.0 1211.0Q2301 1133 2186.5 1044.0Q2072 955 1912.5 869.0Q1753 783 1555 718Q1450 590 1365.0 469.5Q1280 349 1229.5 255.5Q1179 162 1179 115Q1179 66 1198.0 44.5Q1217 23 1263 23Q1337 23 1417.5 80.0Q1498 137 1568.0 240.0Q1638 343 1679 480Q1687 510 1703 510Q1711 510 1714 481Q1718 438 1695.0 376.0Q1672 314 1627.0 248.5Q1582 183 1522.5 126.0Q1463 69 1394.5 33.5Q1326 -2 1255 -2Q1192 -2 1159.0 39.5Q1126 81 1126 127Q1126 222 1179.5 351.5Q1233 481 1379 667Q1288 642 1187.5 617.5Q1087 593 989 568Q834 381 707.0 259.0Q580 137 461 70Q394 31 322.5 14.5Q251 -2 190 -2ZM1585 753Q1754 817 1900.0 903.0Q2046 989 2155.5 1078.0Q2265 1167 2326.5 1241.0Q2388 1315 2388 1355Q2388 1389 2340 1389Q2282 1389 2195.5 1335.5Q2109 1282 2005.5 1191.5Q1902 1101 1794.0 987.0Q1686 873 1585 753Z"/></g></symbol></svg>
 
-<div class="topbar" id="topbar"><div><b>Victor Hugo Fritz</b><small>Advogado trabalhista e previdenciário · OAB/MG 254.499</small></div>
+<div class="topbar" id="topbar"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><div><b>Victor Hugo Fritz</b><small>Advogado trabalhista e previdenciário · OAB/MG 254.499</small></div>
   <a class="btn btn-navy" href="#diagnostico" data-go>Analisar meu caso<span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
 </div>
 
@@ -745,8 +821,8 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
     <div class="body">
       <div class="lft">
         <div class="hx">
-          <div class="ttl"><span class="role">Advogado trabalhista <br>e previdenciário</span><h1>Você pode ter direitos que <em>ninguém te contou.</em></h1></div>
-          <figure class="pic">
+          <div class="ttl"><div class="brand"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><span><b>Victor Hugo Fritz</b><small>OAB/MG 254.499</small></span></div><span class="role">Advogado trabalhista <br>e previdenciário</span><h1>Você pode ter direitos que <em>ninguém te contou.</em></h1></div>
+          <figure class="pic"><svg class="vh vh-bg" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg>
             <picture><source type="image/webp" media="(min-width:980px)" srcset="victor-1000.webp"><source type="image/webp" srcset="victor-480.webp"><img src="victor-1000.jpg" alt="Victor Hugo Fritz, advogado" width="480" height="640" fetchpriority="high" decoding="async"></picture>
             <figcaption><b>Victor Hugo Fritz</b><span>Trabalhista e previdenciário</span><span class="oabn">OAB/MG 254.499</span></figcaption>
           </figure>
@@ -844,7 +920,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
       <h2 class="rv">Antes de me contar o seu caso, me conheça.</h2>
       <p>Uma apresentação rápida, em 37 segundos, para você saber com quem vai falar.</p>
     </div>
-    <figure class="vcard">
+    <figure class="vcard"><span class="vh-badge"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg></span>
       <div class="player" id="player">
       <video id="vid" playsinline preload="none" controlslist="nodownload noplaybackrate" disablepictureinpicture width="720" height="1280"><source src="video.mp4" type="video/mp4"></video>
       <img class="poster" id="poster" src="poster.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
@@ -868,7 +944,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
       <h2 class="rv">Por que escolher o <em>nosso escritório?</em></h2>
       <p class="sub">Um escritório dedicado a poucas coisas, feitas com profundidade.</p>
     </div>
-    <div class="stack"><article class="wc" style="--n:0"><div class="wc-top"><span class="wc-n">01</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span></div><h3>Só Trabalho e INSS. Nada além disso.</h3><p>Não divido atenção com outras áreas do Direito. Todo o meu estudo e o meu tempo vão para as duas áreas que decidem o seu caso.</p></article><article class="wc" style="--n:1"><div class="wc-top"><span class="wc-n">02</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span></div><h3>Seu caso é lido por inteiro</h3><p>Cada caso é analisado individualmente: documentos, datas e detalhes. Nada de resposta pronta nem modelo copiado de outro processo.</p></article><article class="wc" style="--n:2"><div class="wc-top"><span class="wc-n">03</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span></div><h3>O prazo vem em primeiro lugar</h3><p>Antes de qualquer coisa, confiro se o seu direito ainda está no prazo. É o ponto que mais faz as pessoas perderem o que é delas.</p></article><article class="wc" style="--n:3"><div class="wc-top"><span class="wc-n">04</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span></div><h3>Você sabe onde o seu caso está</h3><p>Cada passo explicado por mensagem, em linguagem simples. Você não fica sem resposta, nem sem entender o que está acontecendo.</p></article><article class="wc wc-sig" style="--n:4"><p class="q">“Meu compromisso é tratar o seu caso como se fosse o único que eu tenho.”</p><div class="sig"><img src="avatar.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><div><b>Victor Hugo Fritz</b><span>Advogado trabalhista e previdenciário · OAB/MG 254.499</span></div></div></article></div>
+    <div class="stack"><article class="wc" style="--n:0"><div class="wc-top"><span class="wc-n">01</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span></div><h3>Só Trabalho e INSS. Nada além disso.</h3><p>Não divido atenção com outras áreas do Direito. Todo o meu estudo e o meu tempo vão para as duas áreas que decidem o seu caso.</p></article><article class="wc" style="--n:1"><div class="wc-top"><span class="wc-n">02</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span></div><h3>Seu caso é lido por inteiro</h3><p>Cada caso é analisado individualmente: documentos, datas e detalhes. Nada de resposta pronta nem modelo copiado de outro processo.</p></article><article class="wc" style="--n:2"><div class="wc-top"><span class="wc-n">03</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span></div><h3>O prazo vem em primeiro lugar</h3><p>Antes de qualquer coisa, confiro se o seu direito ainda está no prazo. É o ponto que mais faz as pessoas perderem o que é delas.</p></article><article class="wc" style="--n:3"><div class="wc-top"><span class="wc-n">04</span><span class="wc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span></div><h3>Você sabe onde o seu caso está</h3><p>Cada passo explicado por mensagem, em linguagem simples. Você não fica sem resposta, nem sem entender o que está acontecendo.</p></article><article class="wc wc-sig" style="--n:4"><p class="q">“Meu compromisso é tratar o seu caso como se fosse o único que eu tenho.”</p><svg class="vh vh-sign" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><div class="sig"><img src="avatar.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><div><b>Victor Hugo Fritz</b><span>Advogado trabalhista e previdenciário · OAB/MG 254.499</span></div></div></article></div>
   </div>
 </section>
 
@@ -880,7 +956,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
       <h2 class="rv">Como funciona, em três passos.</h2>
       <p class="sub">Você sabe o que esperar antes mesmo de começar.</p>
     </div>
-    <div class="steps" id="steps"><div class="st-nav" role="tablist"><button class="st-b on" data-s="0" role="tab"><span>1</span><b>Você conta</b></button><button class="st-b" data-s="1" role="tab"><span>2</span><b>Eu analiso</b></button><button class="st-b" data-s="2" role="tab"><span>3</span><b>Consulta por vídeo</b></button><i class="st-line"><i id="stFill"></i></i></div><div class="st-p on" data-s="0"><h3>Você me conta o que aconteceu</h3><p>Pelas perguntas desta página ou direto no WhatsApp. Documentos ajudam, mas não são obrigatórios para começar.</p></div><div class="st-p" data-s="1"><h3>Eu leio e devolvo uma análise honesta</h3><p>Estudo o seu caso e digo, com sinceridade, se existe um caminho. Se não houver, você fica sabendo o motivo.</p></div><div class="st-p" data-s="2"><h3>Consulta estratégica por vídeo</h3><p>Havendo caminho, marcamos uma videochamada para explicar seus direitos, prazos e próximos passos. As condições são combinadas antes.</p></div><div class="st-ctl"><button class="st-next" id="stNext">Próximo passo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
+    <div class="steps" id="steps"><div class="st-nav" role="tablist"><button class="st-b on" data-s="0" role="tab"><span>1</span><b>Você conta</b></button><button class="st-b" data-s="1" role="tab"><span>2</span><b>Eu analiso</b></button><button class="st-b" data-s="2" role="tab"><span>3</span><b>Consulta por vídeo</b></button><i class="st-line"><i id="stFill"></i></i></div><div class="st-p on" data-s="0"><h3>Você me conta o que aconteceu</h3><p>Pelas perguntas desta página ou direto no WhatsApp. Documentos ajudam, mas não são obrigatórios para começar.</p><div class="mock m-chat" aria-hidden="true"><div class="mc-h"><span class="m-av"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg></span><div><b>Dr. Victor Hugo</b><span>online</span></div></div><div class="mc-b"><div class="bub out"><p><b>Olá, Dr. Victor Hugo!</b> Fiz a análise do meu caso no seu site.</p><dl><dt>Área</dt><dd>Trabalho</dd><dt>Situação</dt><dd>Fui demitido</dd></dl><i>10:42</i></div><div class="bub in"><p>Olá! Recebi o seu caso. Vou ler com atenção e já te respondo.</p><i>10:45</i></div></div></div></div><div class="st-p" data-s="1"><h3>Eu leio e devolvo uma análise honesta</h3><p>Estudo o seu caso e digo, com sinceridade, se existe um caminho. Se não houver, você fica sabendo o motivo.</p><div class="mock m-doc" aria-hidden="true"><div class="md-h"><b>Análise do caso</b><span>Leitura individual</span></div><ul><li>Verbas da rescisão</li><li>FGTS e multa de 40%</li><li>Prazo para agir</li></ul><div class="md-l"><i></i><i></i><i></i></div><div class="md-s"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><span>Victor Hugo Fritz<br>OAB/MG 254.499</span></div></div></div><div class="st-p" data-s="2"><h3>Consulta estratégica por vídeo</h3><p>Havendo caminho, marcamos uma videochamada para explicar seus direitos, prazos e próximos passos. As condições são combinadas antes.</p><div class="mock m-call" aria-hidden="true"><span class="mv-tag"><i></i>Consulta por vídeo</span><span class="mv-av"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg></span><b>Dr. Victor Hugo Fritz</b><span class="mv-sub">Direitos, prazos e próximos passos</span><div class="mv-ctl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></i><i class="end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c5-5 13-5 18 0l-2.5 2.5-3-1.5v-2.5a10 10 0 0 0-7 0V16l-3 1.5z"/></svg></i></div></div></div><div class="st-ctl"><button class="st-next" id="stNext">Próximo passo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
   </div>
 </section>
 
@@ -919,7 +995,8 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
       <div class="p-quick" id="pQuick"><span>Prefere falar direto?</span><a id="pQuickA" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A11.8 11.8 0 0 0 1.6 18.2L0 24l6-1.6A11.8 11.8 0 0 0 20 3.9zm-8 18.2a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.9 9.9 0 1 1 12 22.1z"/></svg>Chamar no WhatsApp agora</a></div>
     </div>
   </div>
-  <div class="wrap"><p class="legal"><b>Victor Hugo Fritz Advocacia · OAB/MG 254.499 · Cataguases, MG.</b> Conteúdo exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº 205/2021 do CFOAB. A análise desta página é um primeiro mapa automático, de caráter informativo, e não constitui parecer jurídico nem promessa de resultado. © <span id="yr">2026</span></p><details class="priv"><summary>Privacidade</summary><p>Esta página não pede cadastro e não guarda as respostas do questionário: elas só saem do seu aparelho se você decidir enviá-las pelo WhatsApp. Podemos usar ferramentas de medição de anúncios (como o Pixel da Meta) para saber quantas pessoas visitam a página e entram em contato, sem identificar você pessoalmente. Dúvidas sobre seus dados: fale pelo WhatsApp (32) 99903-3101.</p></details></div>
+  <div class="wrap"><div class="foot-brand"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><span><b>Victor Hugo Fritz</b><small>Advocacia trabalhista e previdenciária</small></span></div>
+<p class="legal"><b>Victor Hugo Fritz Advocacia · OAB/MG 254.499 · Cataguases, MG.</b> Conteúdo exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº 205/2021 do CFOAB. A análise desta página é um primeiro mapa automático, de caráter informativo, e não constitui parecer jurídico nem promessa de resultado. © <span id="yr">2026</span></p><details class="priv"><summary>Privacidade</summary><p>Esta página não pede cadastro e não guarda as respostas do questionário: elas só saem do seu aparelho se você decidir enviá-las pelo WhatsApp. Podemos usar ferramentas de medição de anúncios (como o Pixel da Meta) para saber quantas pessoas visitam a página e entram em contato, sem identificar você pessoalmente. Dúvidas sobre seus dados: fale pelo WhatsApp (32) 99903-3101.</p></details></div>
 </section>
 </main>
 
