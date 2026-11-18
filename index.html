@@ -854,6 +854,82 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
 .m-track b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
 .m-track li span{font-size:12.5px;color:var(--ink-3)}
 @media (prefers-reduced-motion:reduce){.mv-live i,.mv-eq i{animation:none}.mp-scrib{clip-path:none;transition:none}.mp-ok{opacity:1;transform:none;transition:none}.mv-stage img{transition:none}}
+
+/* ========== v9: análise como ficha de escritório ========== */
+.diag .perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid rgba(230,205,172,.16);border-bottom:1px solid rgba(230,205,172,.16)}
+.diag .perks>div{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 12px 14px 0;border:0;border-radius:0}
+.diag .perks>div+div{padding-left:14px;border-left:1px solid rgba(230,205,172,.16)}
+.diag .perks i{width:auto;height:auto;border:0;color:var(--paisley)}
+.diag .perks i svg{width:20px;height:20px}
+.diag .perks b{font-size:14px;font-weight:600;color:#FBF7F2;line-height:1.25}
+.diag .perks span{display:none}
+@media (min-width:880px){.diag .perks span{display:block;font-size:13px;line-height:1.4;margin-top:4px;color:rgba(244,238,230,.6)}.diag .perks b{font-size:15px}}
+.diag .panel{position:relative;background:#FBF8F3;border-radius:22px;box-shadow:0 0 0 1px rgba(230,205,172,.25),0 60px 100px -50px rgba(0,0,0,.75)}
+.diag .panel::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.diag .panel>*{position:relative}
+.diag .p-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 16px;background:none;border-bottom:1px solid var(--concrete-2)}
+.diag .p-head::after{content:"";position:absolute;left:20px;right:20px;bottom:-4px;height:1px;background:var(--concrete-2)}
+.ph-l{display:flex;align-items:center;gap:12px;min-width:0}
+.ph-l .vh{width:58px;height:auto;color:var(--brass-d);flex:none}
+.ph-l>div{padding-left:12px;border-left:1px solid var(--concrete-2);line-height:1.25;min-width:0}
+.ph-l b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;color:var(--ink);letter-spacing:0;white-space:nowrap}
+.ph-l small{display:flex;gap:8px;font-size:11.5px;color:var(--ink-3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ph-r{display:flex;align-items:center;gap:9px;flex:none}
+.ph-r .av{position:relative;width:40px;height:40px;border-radius:50%;overflow:visible;flex:none}
+.ph-r .av img{width:40px;height:40px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--paisley-2)}
+.ph-r .av::after{content:"";position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#22A45D;box-shadow:0 0 0 2px #FBF8F3}
+.ph-r b{display:block;font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap}
+.ph-r small{display:block;font-size:11.5px;color:#178A47;font-weight:500;white-space:nowrap}
+@media (max-width:420px){.ph-r>div{display:none}.ph-l .vh{width:50px}.ph-l b{font-size:18px}}
+.diag .stepper{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:0 20px;margin:4px 0 0;border-bottom:1px solid var(--concrete-2)}
+.diag .stepper div{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 8px 12px 0;text-align:left;font-size:inherit;color:var(--ink-3)}
+.diag .stepper div+div{padding-left:10px;border-left:1px dashed var(--concrete-2)}
+.diag .stepper div::before{content:none!important;display:none}
+.diag .stepper .sl{font-size:11px;font-weight:600;color:var(--ink-3)}
+.diag .stepper .sv{display:block;max-width:100%;font-family:var(--serif);font-weight:400;font-size:15px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
+.diag .stepper div.done .sv{color:var(--ink)}
+.diag .stepper div.on .sl{color:var(--brass-d)}
+.diag .stepper div.on .sv{color:var(--brass-d);font-family:var(--serif-i);font-style:italic}
+.diag .stepper div i{position:absolute;left:0;right:0;top:auto;bottom:-1px;height:2px;border-radius:0;background:transparent;overflow:visible}
+.diag .stepper div+div i{left:10px}
+.diag .stepper div i::after{background:var(--brass);transform:scaleX(0);transition:transform .5s var(--ease)}
+.diag .stepper div.on i::after{transform:scaleX(.55)}
+.diag .stepper div.done i::after{transform:scaleX(1);background:var(--navy)}
+.diag .stepper div:last-child i{display:block}
+.diag .p-body{padding:24px 20px 22px;min-height:0}
+.diag .qn{font-size:12px;font-weight:600;color:var(--brass-d);margin-bottom:6px}
+.diag .panel h3{font-family:var(--serif);font-weight:400;font-size:clamp(23px,6vw,27px);line-height:1.18;letter-spacing:-.005em;margin-bottom:6px}
+.diag .panel .hint{font-size:14.5px;margin-bottom:16px}
+.diag .ch{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:13px 14px 13px 16px;border-radius:14px;background:#fff;border:1px solid var(--concrete-2);box-shadow:0 1px 0 rgba(42,28,21,.03);font-size:16px;font-weight:500;color:var(--ink);text-align:left;transition:border-color .2s,background .2s,color .2s,transform .15s}
+.diag .ch>span:last-child{flex:1}
+.diag .ch.radio .box{order:2;width:22px;height:22px;border:0;border-radius:50%;background:transparent;color:var(--ink-3)}
+.diag .ch.radio .box::before{content:"";width:8px;height:8px;border-right:2px solid var(--ink-3);border-top:2px solid var(--ink-3);transform:rotate(45deg) translate(-1px,1px);transition:opacity .2s}
+.diag .ch.radio .box svg{position:absolute}
+.diag .ch.radio .box{position:relative}
+.diag .ch.radio.sel .box::before{opacity:0}
+@media (hover:hover){.diag .ch:hover{border-color:var(--brass);background:#fff}}
+.diag .ch:active{transform:scale(.99)}
+.diag .ch.sel{background:var(--navy);border-color:var(--navy);color:#FBF7F2;box-shadow:0 14px 26px -18px rgba(42,28,21,.9)}
+.diag .ch.sel .box{background:var(--paisley);border-color:var(--paisley)}
+.diag .ch.sel .box svg{color:var(--navy)}
+.diag .ch:not(.radio) .box{border-radius:7px;border:1.5px solid var(--concrete-2);background:#fff}
+.diag .ch:not(.radio).sel .box{background:var(--paisley);border-color:var(--paisley)}
+.diag .why{margin-top:18px;padding:2px 0 2px 14px;border-radius:0;background:none;border-left:2px solid var(--paisley);font-family:var(--serif-i);font-style:italic;font-size:15px;line-height:1.45;color:var(--ink-2)}
+.diag .why svg{display:none}
+.diag .why b{display:block;font-family:"Instrument Sans",system-ui,sans-serif;font-style:normal;font-size:11.5px;font-weight:600;color:var(--brass-d);margin-bottom:2px}
+.diag .area{background:#fff;border:1px solid var(--concrete-2);border-radius:16px}
+@media (hover:hover){.diag .area:hover{border-color:var(--brass)}}
+.diag .area .ai{background:var(--navy);color:var(--paisley-2)}
+.diag .p-quick{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:none;border-top:1px solid var(--concrete-2)}
+.pq-t{display:flex;flex-direction:column;font-size:13px;color:var(--ink-3);line-height:1.35}
+.pq-t b{font-size:14.5px;font-weight:600;color:var(--ink)}
+.diag .p-quick a{flex:none;background:#fff;color:#178A47;border:1.5px solid #22A45D;padding:9px 14px;border-radius:12px;font-size:14.5px}
+@media (hover:hover){.diag .p-quick a:hover{background:#22A45D;color:#fff}}
+.diag .field input,.diag .field textarea{background:#fff}
+.diag .r-stamp{display:none}
+.r-ok{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:#E3F4E6;color:#1F7A3A!important;font-size:11.5px!important;font-weight:600}
+.r-ok::before{content:"";width:6px;height:6px;border-radius:50%;background:#22A45D}
+.diag .r-doc{background:#fff;border-color:var(--concrete-2)}
 </style>
 </head>
 <body>
@@ -1035,14 +1111,13 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
         <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></i><div><b>Sem compromisso</b><span>Nada é salvo nesta página. Condições só são combinadas antes de agendar.</span></div></div>
         <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></i><div><b>Lido por mim</b><span>Sua mensagem chega direto no meu WhatsApp</span></div></div>
       </div>
-      <p class="direct">Prefere escrever do seu jeito? <a class="link" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo.%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20caso." target="_blank" rel="noopener">WhatsApp (32) 99903-3101</a></p>
     </div>
 
     <div class="panel" id="panel">
-      <div class="p-head"><span class="av"><img src="avatar.webp" alt="Victor Hugo Fritz" width="96" height="96" loading="lazy" decoding="async"></span><div class="who"><b>Dr. Victor Hugo Fritz</b><small>Advogado · OAB/MG 254.499</small><small class="st">Responde pessoalmente</small></div><span class="time">≈ 1 min</span></div>
-      <div class="stepper" id="stepper"><div><i></i>Área</div><div><i></i>Situação</div><div><i></i>Detalhes</div><div><i></i>Envio</div></div>
+      <div class="p-head"><div class="ph-l"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><div><b>Ficha de análise</b><small><span id="pNo"></span><span id="pDate"></span></small></div></div><div class="ph-r"><span class="av"><img src="perfil-192.webp" alt="Victor Hugo Fritz" width="96" height="96" loading="lazy" decoding="async"></span><div><b>Dr. Victor Hugo</b><small>Lê pessoalmente</small></div></div></div>
+      <div class="stepper" id="stepper"><div><span class="sl">Área</span><b class="sv">—</b><i></i></div><div><span class="sl">Situação</span><b class="sv">—</b><i></i></div><div><span class="sl">Detalhes</span><b class="sv">—</b><i></i></div><div><span class="sl">Envio</span><b class="sv">—</b><i></i></div></div>
       <div class="p-body" id="pbody" aria-live="polite"></div>
-      <div class="p-quick" id="pQuick"><span>Prefere falar direto?</span><a id="pQuickA" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A11.8 11.8 0 0 0 1.6 18.2L0 24l6-1.6A11.8 11.8 0 0 0 20 3.9zm-8 18.2a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.9 9.9 0 1 1 12 22.1z"/></svg>Chamar no WhatsApp agora</a></div>
+      <div class="p-quick" id="pQuick"><span class="pq-t"><b>Prefere falar direto?</b>Me chame no WhatsApp</span><a id="pQuickA" href="https://wa.me/5532999033101?text=Ol%C3%A1%2C%20Dr.%20Victor%20Hugo!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A11.8 11.8 0 0 0 1.6 18.2L0 24l6-1.6A11.8 11.8 0 0 0 20 3.9zm-8 18.2a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.9 9.9 0 1 1 12 22.1z"/></svg>WhatsApp</a></div>
     </div>
   </div>
   <div class="wrap"><div class="foot-brand"><svg class="vh" aria-hidden="true"><use href="#vh" width="100%" height="100%"/></svg><span><b>Victor Hugo Fritz</b><small>Advocacia trabalhista e previdenciária</small></span></div>
@@ -1182,7 +1257,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
   var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>';
   var BACK='<button class="back" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>';
   function btn(label,id){return '<button class="btn btn-navy" id="'+id+'">'+label+'<span class="chip">'+ARROW+ARROW+'</span></button>';}
-  function stage(id){var s=STAGE[id];stepDivs.forEach(function(d,i){d.classList.toggle('done',i<s);d.classList.toggle('on',i===s);});}
+  function stage(id){var s=STAGE[id];var SH={dem:'Demitido',jc:'Justa causa',pedi:'Pedi demissão',ativo:'Trabalhando',apos:'Aposentadoria',neg:'Negado',cort:'Cortado',rev:'Revisão',pens:'Pensão',acid:'Auxílio-acidente',bpc:'BPC/LOAS'};var v=[A.start?({trab:'Trabalho',inss:'INSS',emp:'Empresa'})[A.start]:'',A.t1?SH[A.t1]:A.i1?SH[A.i1]:A.e1?label('e1',A.e1):'','Feito','Pronto'];stepDivs.forEach(function(d,i){d.classList.toggle('done',i<s);d.classList.toggle('on',i===s);var sv=d.querySelector('.sv');if(sv)sv.textContent=i<s?(v[i]||'Feito'):i===s?'Agora':'—';});var no=document.getElementById('pNo');if(no&&!no.textContent){no.textContent=fno;var d=new Date();document.getElementById('pDate').textContent=('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear();}}
   function mount(html,dir){pbody.innerHTML='';var s=document.createElement('div');s.className='screen'+(dir==='b'?' back-anim':'');s.innerHTML=html;pbody.appendChild(s);var b=$('[data-back]',s);if(b)b.onclick=back;return s;}
   function render(id,dir){
     $('#panel').classList.toggle('is-res',id==='res');
@@ -1268,7 +1343,7 @@ h2 mark{background:none;color:var(--paisley-2);font-family:var(--serif-i);font-s
     var ARN={trab:'Direito do Trabalho',inss:'Direito Previdenciário (INSS)',emp:'Prevenção trabalhista (empresa)'}[A.start];
     var msg='Olá, Dr. Victor Hugo! '+(n?'Meu nome é '+n+'. ':'')+'Fiz a análise do meu caso no seu site e gostaria da sua avaliação.\n\n*Área:* '+ARN+'\n\n*Minhas respostas*\n'+summary()+(A.txt?'\n\n*Em poucas palavras*\n'+A.txt:'')+'\n\n*Pontos indicados na análise*\n'+r.p.map(function(x,i){return (i+1)+'. '+x;}).join('\n')+(r.w.length?'\n\n*Atenção ao prazo*\n'+r.w.join('\n'):'')+'\n\nAguardo a sua orientação. Obrigado(a)!';
     var dd=('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear();
-    var h='<div class="report"><div class="r-doc"><div class="r-top"><b>Ficha do seu caso</b><span>'+fno+'</span></div>';
+    var h='<div class="report"><div class="r-doc"><div class="r-top"><b>Resultado da análise</b><span class="r-ok">Pronto para envio</span></div>';
     h+='<dl class="r-dl">'+(n?'<dt>Nome</dt><dd>'+esc(n)+'</dd>':'')+'<dt>Área</dt><dd>'+({trab:'Direito do Trabalho',inss:'Direito Previdenciário',emp:'Prevenção trabalhista'})[A.start]+'</dd><dt>Data</dt><dd>'+dd+'</dd><dt>Resultado</dt><dd class="big">'+r.st+'</dd></dl>';
     h+='<h4><span>Pontos para analisar</span><span>'+r.p.length+'</span></h4><ul class="pts">';
     r.p.forEach(function(x,i){h+='<li style="animation-delay:'+(i*.08)+'s"><i>'+(i+1)+'</i><span>'+x+'</span></li>';});
